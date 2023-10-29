@@ -1,13 +1,13 @@
-const path = require('path');
-const escape = require('escape-string-regexp');
-const { getDefaultConfig } = require('@expo/metro-config');
-const exclusionList = require('metro-config/src/defaults/exclusionList');
-const pak = require('../package.json');
+const path = require('path')
+const escape = require('escape-string-regexp')
+const { getDefaultConfig } = require('@expo/metro-config')
+const exclusionList = require('metro-config/src/defaults/exclusionList')
+const pak = require('../package.json')
 
-const root = path.resolve(__dirname, '..');
-const modules = Object.keys({ ...pak.peerDependencies });
+const root = path.resolve(__dirname, '..')
+const modules = Object.keys({ ...pak.peerDependencies })
 
-const defaultConfig = getDefaultConfig(__dirname);
+const defaultConfig = getDefaultConfig(__dirname)
 
 /**
  * Metro configuration
@@ -34,10 +34,10 @@ const config = {
     ),
 
     extraNodeModules: modules.reduce((acc, name) => {
-      acc[name] = path.join(__dirname, 'node_modules', name);
-      return acc;
+      acc[name] = path.join(__dirname, 'node_modules', name)
+      return acc
     }, {}),
   },
-};
+}
 
-module.exports = config;
+module.exports = config

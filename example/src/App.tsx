@@ -1,31 +1,47 @@
-import * as React from 'react';
+import React from 'react'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
+import { Carousel } from 'react-native-flash-carousel'
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-flashlist-carousel';
+const { width, height } = Dimensions.get('screen')
+const cardHeight = 350
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Carousel
+        data={Array(10).fill(0)}
+        renderItem={({ index }) => <Card num={index + 1} />}
+      />
     </View>
-  );
+  )
 }
+
+const Card = ({ num }: { num: number }) => (
+  <View style={[styles.card, { backgroundColor: randomColor() }]}>
+    <Text style={styles.cardText}>{num}</Text>
+  </View>
+)
+
+const randomNumber = () => Math.floor(Math.random() * 255)
+const randomColor = () =>
+  `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: (height - cardHeight) / 2,
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  card: {
+    width: width - 10 * 2,
+    height: cardHeight,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 10,
   },
-});
+  cardText: {
+    fontSize: 100,
+    color: 'white',
+  },
+})

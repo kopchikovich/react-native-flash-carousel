@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-flashlist-carousel": ["./src/index"]
+      "react-native-flash-carousel": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
