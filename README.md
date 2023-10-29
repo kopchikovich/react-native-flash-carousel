@@ -5,17 +5,29 @@ Carousel component for React Native powered by FlashList
 ## Installation
 
 ```sh
-npm install react-native-flash-carousel
+yarn add @shopify/flash-list
+yarn add react-native-flash-carousel
 ```
 
 ## Usage
 
+TODO
+
+Only 2 props are required: data and renderItem
+
+Please check [FlashList docs](https://shopify.github.io/flash-list/docs/usage)
+
 ```js
-import { multiply } from 'react-native-flash-carousel';
+import { Carousel } from 'react-native-flash-carousel'
 
 // ...
 
-const result = await multiply(3, 7);
+export const AwesomeApp = () => (
+  <Carousel
+    data={yourData}
+    renderItem={({ item }) => <CardComponent item={item} />}
+  />
+)
 ```
 
 ## Contributing
