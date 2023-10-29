@@ -28,7 +28,7 @@
   "scripts": {
     "example": "yarn workspace react-native-flashlist-carousel-example",
     "test": "jest",
-    "typecheck": "tsc --noEmit",
+    "tsc": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
@@ -36,8 +36,10 @@
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "carousel",
+    "react-native-snap-carousel",
+    "android",
+    "ios"
   ],
   "repository": "https://github.com/kopchikovich/react-native-flashlist-carousel",
   "author": "Aleksandr Kovalchuk <kopchikovich@pm.me> (https://github.com/kopchikovich)",
