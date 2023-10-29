@@ -28,7 +28,7 @@
   "scripts": {
     "example": "yarn workspace react-native-flash-carousel-example",
     "test": "jest",
-    "tsc": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
