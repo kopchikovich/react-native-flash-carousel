@@ -1,17 +1,17 @@
-# react-native-flashlist-carousel
+# react-native-flash-carousel
 
 Carousel component for React Native powered by FlashList
 
 ## Installation
 
 ```sh
-npm install react-native-flashlist-carousel
+npm install react-native-flash-carousel
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'react-native-flashlist-carousel';
+import { multiply } from 'react-native-flash-carousel';
 
 // ...
 
