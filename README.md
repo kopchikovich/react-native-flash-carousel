@@ -1,6 +1,6 @@
 # react-native-flash-carousel
 
-Carousel component for React Native powered by FlashList
+Carousel component for React Native powered by [FlashList](https://shopify.github.io/flash-list/docs/)
 
 ## Installation
 
@@ -11,11 +11,8 @@ yarn add react-native-flash-carousel
 
 ## Usage
 
-TODO
-
 Only 2 props are required: data and renderItem
 
-Please check [FlashList docs](https://shopify.github.io/flash-list/docs/usage)
 
 ```js
 import { Carousel } from 'react-native-flash-carousel'
@@ -25,10 +22,23 @@ import { Carousel } from 'react-native-flash-carousel'
 export const AwesomeApp = () => (
   <Carousel
     data={yourData}
-    renderItem={({ item }) => <CardComponent item={item} />}
+    renderItem={({ item }) => <Card item={item} />}
   />
 )
 ```
+
+## Props
+
+
+| Prop               | Description                                                                                                                                              | Type                                                                        | Default |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|---------|
+| data               | **Required**                                                                                                                                             | [FlashList doc](https://shopify.github.io/flash-list/docs/usage#data)       |         |
+| renderItem         | **Required**                                                                                                                                             | [FlashList doc](https://shopify.github.io/flash-list/docs/usage#renderitem) |         |
+| autoScroll         | Enables auto scrolling of the carousel                                                                                                                   | boolean                                                                     | false   |
+| autoScrollInterval | Only works when auto scroll is enabled. <br/> Scroll interval in seconds.                                                                                | number                                                                      | 5       |
+| autoScrollPause    | Only works when auto scroll is enabled. <br/> The interval after which auto scroll starts working again after the user has interacted with the carousel  | number                                                                      | 5       |
+
+Supports FlashList's props for horizontal list [FlashList docs](https://shopify.github.io/flash-list/docs/usage)
 
 ## Contributing
 

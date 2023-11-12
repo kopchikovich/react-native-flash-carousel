@@ -11,6 +11,7 @@ export default function App() {
       <Carousel
         data={Array(10).fill(0)}
         renderItem={({ index }) => <Card num={index + 1} />}
+        autoScroll
       />
     </View>
   )
