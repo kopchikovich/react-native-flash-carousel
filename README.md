@@ -2,6 +2,8 @@
 
 Carousel component for React Native powered by [FlashList](https://shopify.github.io/flash-list/docs/)
 
+![Animation](assets/carousel.gif)
+
 ## Installation
 
 ```sh
