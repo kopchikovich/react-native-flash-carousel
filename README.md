@@ -42,6 +42,18 @@ export const AwesomeApp = () => (
 
 Supports FlashList's props for horizontal list [FlashList docs](https://shopify.github.io/flash-list/docs/usage)
 
+## Roadmap
+
+Will be dynamically updated
+
+- [x] `v0.2` Carousel component
+- [x] `v0.3` Auto scroll feature
+- [ ] Pagination component
+- [ ] Looping feature
+- [ ] Analytics feature
+- [ ] Different types of swiping feature
+- [ ] ...
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
