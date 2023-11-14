@@ -35,9 +35,16 @@
     "release": "release-it"
   },
   "keywords": [
-    "react-native",
+    "react",
+    "swiper",
     "carousel",
+    "react-native",
+    "react-native-swiper",
+    "react-native-carousel",
     "react-native-snap-carousel",
+    "react-native-flash-carousel",
+    "react-native-flash-list",
+    "flash-list",
     "android",
     "ios"
   ],
