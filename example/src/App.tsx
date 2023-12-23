@@ -1,19 +1,22 @@
 import React from 'react'
-import { StyleSheet, View, Text, Dimensions } from 'react-native'
+import { StyleSheet, View, Text, Dimensions, SafeAreaView } from 'react-native'
 import { Carousel } from 'react-native-flash-carousel'
 
-const { width, height } = Dimensions.get('screen')
+const { width } = Dimensions.get('screen')
 const cardHeight = 350
 
 export default function App() {
+  const data = Array(10).fill(0)
+
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Carousel
-        data={Array(10).fill(0)}
+        data={data}
         renderItem={({ index }) => <Card num={index + 1} />}
+        pagination
         autoScroll
       />
-    </View>
+    </SafeAreaView>
   )
 }
 
@@ -32,7 +35,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: (height - cardHeight) / 2,
+    paddingVertical: 16,
   },
   card: {
     width: width - 10 * 2,
