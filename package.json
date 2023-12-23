@@ -1,6 +1,6 @@
 {
   "name": "react-native-flash-carousel",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Carousel component for React Native powered by FlashList",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
